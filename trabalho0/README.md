@@ -8,7 +8,7 @@
 * Execute as funções q1() ou q2();
 
 ## Obs: 
-Todos os arquivos devem coexistir no mesmo diretório.
-
+* Todos os arquivos devem coexistir no mesmo diretório;
+* É possível mudar as entradas no arquivo generate_files_in.m.
 
 
