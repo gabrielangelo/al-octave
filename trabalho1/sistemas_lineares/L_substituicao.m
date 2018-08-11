@@ -1,7 +1,7 @@
-function [x] = L_substituicao (L, y)
-	n = length( y );
-	y = zeros( y, 1 );
+function [y] = L_substituicao (L, b)
+	n = length( b );
+	y = zeros( n, 1 );
 	for i=1:n
-   		x(i) = y(i) - L(i, :)*x;
-	end 
+   		y(i) = b(i) - L(i, :)*y;
+	end
 endfunction

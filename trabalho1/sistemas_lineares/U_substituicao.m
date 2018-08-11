@@ -1,4 +1,4 @@
-function [ x ] = retrosubstituicao (U,b)
+function [ x ] = U_substituicao (U,b)
 	n = length( b );
 	x = zeros( n, 1 );
 	for i=n:-1:1
