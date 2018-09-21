@@ -5,9 +5,8 @@ function [L, U, P] = LU_pivot(A)
         for j=k:m
             if(abs(U(j,k))==pivot)
                 ind=j
-
                 break;
-            end
+            endif
         end
         U([k,ind],k:m)=U([ind,k],k:m)
         L([k,ind],1:k-1)=L([ind,k],1:k-1)
@@ -18,4 +17,4 @@ function [L, U, P] = LU_pivot(A)
         end
         pause;
     end
-endfunction
+end
