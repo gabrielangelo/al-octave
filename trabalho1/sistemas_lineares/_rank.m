@@ -19,7 +19,8 @@ function [resposta] = _rank (U, b)
 			break;
                 endif
 		p++;
-	end	
+	end
+	disp ( cont_por_linha);	
 	if (valor == m) 
 		resposta = 1;
 	endif
