@@ -5,7 +5,6 @@ function [matrix] = gauss_jordan_elimination(matrix)
 
   m = 1;
   n = 1;
-  jb = [];
   
   while (m <= row) && (n <= col)
      [j,i] = max(abs(matrix(m:row,n)));
@@ -14,7 +13,6 @@ function [matrix] = gauss_jordan_elimination(matrix)
         matrix(m:row,n) = 0;
         n = n + 1;
      else
-        jb = [jb n];
         matrix([m i],n:col) = matrix([i m],n:col);
         temp = matrix(m,n:col)/matrix(m,n);    
         matrix(:,n:col) = matrix(:,n:col) - matrix(:,n)*temp;
