@@ -1,5 +1,5 @@
 
-function [rref] = gauss_jordan_elimination(matrix)
+function [matrix] = gauss_jordan_elimination(matrix)
 
  [row,col] = size(matrix);
 
