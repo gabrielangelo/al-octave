@@ -20,6 +20,6 @@ function [L, U, P] = LU_pivot(A)
             L(j,k)=U(j,k)/U(k,k);
             U(j,k:n)=U(j,k:h)-L(j,k)*U(k,k:h);
         end
-        pause;
+        #pause;
     end
 end
