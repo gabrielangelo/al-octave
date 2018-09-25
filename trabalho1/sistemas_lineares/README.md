@@ -1,8 +1,8 @@
-## sistemas lineares 
+## Sistemas lineares 
 
 Este módulo trata da resolução de sistemas lineares usando decomposição LU com pivotamento parcial.
 
-## funcionalidades 
+## Funcionalidades 
 * Decomposição lu com pivotamento parcial -> LU_pivot.m; <br>
 calcula o a decomposição P*L*U:  
 ```
