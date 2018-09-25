@@ -1,4 +1,4 @@
-function [matrix] = gauss_jordan_elimination(matrix) 
+function [inv] = gauss_jordan_elimination(matrix) 
 	if (rows(matrix) != columns(matrix))
 		disp("matriz deve ser quadrada!");
 		return 
@@ -24,5 +24,5 @@ function [matrix] = gauss_jordan_elimination(matrix)
         		n = n + 1;
 		endif
 	end
-  
+	inv = matrix(:, [col/2 + 1:col])
 endfunction
