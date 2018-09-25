@@ -90,5 +90,5 @@ ans =
    3.8065e-16
   -5.0000e-01
    5.0000e-01
-#### Obs: Grande maioria dos métodos acima (Menos multiples_entries) são usados no método gauss_eli_lu <br> que calcula qualquer solução de um sistema linear com solução qualquer (Consistente, indeterminado ou inconsistente).
+#### Obs: Grande maioria dos métodos acima (Menos multiples_entries) são encapsulados pelo método gauss_eli_lu <br> que calcula qualquer solução(Consistente, indeterminado ou inconsistente) de um sistema linear. 
  
