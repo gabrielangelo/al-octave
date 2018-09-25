@@ -1,4 +1,4 @@
-function multiplas_entradas (A, b)
+function multiples_entries (A, b)
 	cols_b = columns (b);
 	[L, U, P] = LU_pivot (A);
 	[lin_a, cols_a] = size (A);
