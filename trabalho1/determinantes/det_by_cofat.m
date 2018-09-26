@@ -1,4 +1,5 @@
-function [y] = determinante(A)
+function [y] = det_by_cofat(A)
+
 m = length(A);
 y = 0;
 
@@ -13,4 +14,4 @@ else
         y = y+((-1) ^ (1+i)) * A(1,i) * cofator(A,1,i);
 end
 end
-end 
+end

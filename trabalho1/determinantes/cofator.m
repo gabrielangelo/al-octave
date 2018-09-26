@@ -20,6 +20,6 @@ function [ output ] = cofator( A,i,j )
 
         col = 1;
     end
-    output = determinante(new);
+    output = det_by_cofat(new);
 
 end
