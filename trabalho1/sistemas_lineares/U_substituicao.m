@@ -1,3 +1,4 @@
+# referências: http://mathfaculty.fullerton.edu/mathews/n2003/backsubstitutionmod.html
 function [ x ] = U_substituicao (U,b)
 	n = length( b );
 	x = zeros( n, 1 );

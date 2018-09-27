@@ -6,7 +6,6 @@ function [x] = gauss_eli_lu (A, b)
 		y = L_substituicao (L, P*b);
 		rank = _rank(U, y);	
 		if (rank == rows (U))
-			disp (y);
 			x = U_substituicao (U, y);
 		elseif (rank < rows (U) && rank > -1)
 			x = solve_mult_sol (U, y);
