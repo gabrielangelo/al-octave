@@ -20,7 +20,7 @@ function [Det] = det_by_prop(A)
         disp("U matrix: "), disp(U)
         main_diag = diag(U);
         disp("Main diagonal: ") , disp(main_diag)
-        Det = (-1)^cont_perm * (prod(main_diag));
-        disp("Determinant value: ") , disp(Det)
+        det = (-1)^cont_perm * (prod(main_diag));
+        disp("Determinant value: ") , disp(det)
     end
 endfunction
