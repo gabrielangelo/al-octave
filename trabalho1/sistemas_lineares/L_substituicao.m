@@ -1,3 +1,4 @@
+# referências: http://mathfaculty.fullerton.edu/mathews/n2003/backsubstitutionmod.html
 function [y] = L_substituicao (L, b)
 	n = length( b );
 	y = zeros( n, 1 );
