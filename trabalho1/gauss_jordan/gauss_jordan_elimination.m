@@ -1,21 +1,20 @@
 %Eliminação Gauss-Jordan para matrizes quadradas 
 %Este método reduz uma matriz a sua forma reduzida escalonada por linhas, 
 %e retorna a inversa da matriz inserida.
-
 function [inv] = gauss_jordan_elimination(matrix) 
   %Verifica se a matriz é quadrada, caso não seja, a função não pode continuar
 	if (rows(matrix) != columns(matrix))
 		disp("matriz deve ser quadrada!");
 		return 
-  	endif
+  endif
 
-  	matrix = [matrix eye(rows (matrix), columns (matrix))]
-  	[row,col] = size(matrix);
-  	m = 1;
-  	n = 1;
-    %row e col são respectivamente as linhas e colunas da matriz
-    %m e n são os contadores para podermos iterar pela matriz
-    %loop por toda a matriz
+  matrix = [matrix eye(rows (matrix), columns (matrix))]
+  [row,col] = size(matrix);
+  m = 1;
+  n = 1;
+  %row e col são respectivamente as linhas e colunas da matriz
+  %m e n são os contadores para podermos iterar pela matriz
+  %loop por toda a matriz
 	while (m <= row) && (n <= col)
         %Aqui encontramos o valor (j) e a posição (i) do maior valor da coluna n 
      		[j,i] = max(abs(matrix(m:row,n)));
@@ -34,7 +33,7 @@ function [inv] = gauss_jordan_elimination(matrix)
         		matrix(m,n:col) = temp;
         		m = m + 1;
         		n = n + 1;
-		endif
+		    endif
 	end
 	inv = matrix(:, [col/2 + 1:col])
 endfunction
