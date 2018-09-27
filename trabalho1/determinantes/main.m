@@ -1,9 +1,12 @@
 clear all;
 clc
 close all;
-% Matrix determinant
+% Create a menu to choose between two ways to calculate determinants;
 menu1 = menu('Choose the determinant calculator: ','By Cofactor','By Properties');
+
+% switch -> case to handle the chosen option
 switch (menu1)
+    %this first option is calculate determinant by cofactor matrix
     case 1
     count = 1;
     while count <= 5
@@ -17,7 +20,7 @@ switch (menu1)
         disp(y)
         count = count + 1;
     endwhile
-
+    % this second option is calculate the determinant using the properties
     case 2
     count = 1;
     while count <= 5
@@ -31,5 +34,6 @@ switch (menu1)
         count = count + 1;
     endwhile
     otherwise
+        % this is to handle if the user input an invalid option
         disp("Invalid Option")
 endswitch

@@ -1,8 +1,9 @@
 function [ output ] = cofator( A,i,j )
     [m,n]=size(A);
  
-%criar uma nova matriz, eliminando a linha e coluna em que o elemento está presente
-%matriz dos cofatores
+% here is the implementation of cofactor concept;
+% create a new matrix by eleminating the row and column in which the element is presente;
+% COFACTOR MATRIX
  
     row = 1;
     col = 1;
