@@ -1,5 +1,5 @@
 function [det] = det_by_prop(A)
-    disp(A)
+    #disp(A)
     m = length(A);
     y = 0;
     % checking if the matrix it's a square matrix, 
@@ -16,11 +16,12 @@ function [det] = det_by_prop(A)
     else
 	run("../sistemas_lineares/LU_pivot.m");
         [L, U, P, cont_perm] = LU_pivot(A);
-        disp("U matrix: "), disp(U)
+        #disp("U matrix: "), 
+	#disp(U);
         main_diag = diag(U);
-        disp("Main diagonal: ") , disp(main_diag)
+        #disp("Main diagonal: ") , disp(main_diag)
         det = (-1)^cont_perm * (prod(main_diag));
-        disp("Determinant value: ");
-	disp(det);
+        #disp("Determinant value: ");
+	#disp(det);
     endif
 endfunction
