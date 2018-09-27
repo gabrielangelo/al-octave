@@ -3,6 +3,7 @@ function multiples_entries (A, b)
 	[L, U, P] = LU_pivot (A);
 	[lin_a, cols_a] = size (A);
 	for j=1:cols_b
+		#pega vetor b(:, j)
 		_b = b(:, j);
 		y = L_substituicao (L,P*_b);
 		rank = _rank (U, y);
@@ -16,9 +17,6 @@ function multiples_entries (A, b)
 		elseif (rank == -1)	
 			disp ("solução inconsistente");
 		endif
-		#printf ('solução vetor %d\n', j);
-		#disp (x);
-		#disp ("\n");
 	end
 endfunction
 				
