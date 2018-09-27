@@ -7,7 +7,7 @@ function [new_mat, new_b, vars] = break_matrix (U, b)
 				new_mat = [new_mat, U(:,j)];
 				vars = [vars, j];
 				break;
-			elseif (i == m && j == n && ( (U(i, j) == 0 && b(i, :) == 0) || (U(i, j) != 0 && b(i, :) == 0) ) )
+			elseif ((i == m && j == n) && ( (U(i, j) == 0 && b(i, :) == 0) || (U(i, j) != 0 && b(i, :) == 0) ) )
 				new_mat (i, :) = [];
 				break;
 			endif

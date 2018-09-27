@@ -5,6 +5,3 @@ function [ x ] = U_substituicao (U,b)
    		x(i) = ( b(i) - U(i, :)*x )/U(i, i);
 	end
 endfunction
-
-
-  
