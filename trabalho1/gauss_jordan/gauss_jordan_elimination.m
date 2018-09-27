@@ -3,10 +3,16 @@
 %e retorna a inversa da matriz inserida.
 function [inv] = gauss_jordan_elimination(matrix) 
   %Verifica se a matriz é quadrada, caso não seja, a função não pode continuar
-	if (rows(matrix) != columns(matrix))
-		disp("matriz deve ser quadrada!");
-		return 
+  if (rows(matrix) != columns(matrix))
+      disp("matriz deve ser quadrada!");
+      return 
   endif
+  #run ("../determinantes/det_by_prop.m");
+ 
+  #if (det_by_prop (matrix) == 0)
+  #	disp ("matrix é singular");
+  #	return;
+  #endif
 
   matrix = [matrix eye(rows (matrix), columns (matrix))]
   [row,col] = size(matrix);
